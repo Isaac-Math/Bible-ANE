@@ -32,7 +32,7 @@
   --primary:#a3512b; --primary-light:#d18b60; --primary-xlight:#f8e9df; --primary-dark:#5e2c14;
   --accent:#e76f51; --sky:#4895ef; --sky-light:#cce5ff;
   --gold:#f4a261; --gold-light:#fde9d4; --purple:#7b2d8b; --purple-light:#e8d5ed;
-  --bg:#f9fafb; --card:#ffffff; --text:#1a1a2e; --muted:#6c757d;
+  --bg:#f9fafb; --card:#ffffff; --text:#1a1a2e; --muted:#5c636a;
   --border:#dee2e6; --radius:12px; --shadow:0 2px 12px rgba(0,0,0,0.08);
 }
 *{box-sizing:border-box;margin:0;padding:0;}
@@ -131,7 +131,7 @@ table.tbl td{padding:9px 10px;border-bottom:1px solid var(--border);vertical-ali
 table.tbl tr:nth-child(even) td{background:#fbf6f2;}
 
 .spectrum-bar{margin:18px 0;}
-.spectrum-track{height:10px;border-radius:5px;background:linear-gradient(90deg,#6c757d,var(--primary-light),var(--primary-dark));}
+.spectrum-track{height:10px;border-radius:5px;background:linear-gradient(90deg,#5c636a,var(--primary-light),var(--primary-dark));}
 .spectrum-labels{display:flex;justify-content:space-between;font-size:.78rem;font-weight:700;color:var(--muted);margin-top:6px;gap:8px;}
 
 .artifact-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;}
@@ -190,11 +190,17 @@ footer a{color:rgba(255,255,255,.9);text-decoration:none;font-weight:400;}
   .discuss-card{padding:16px;} .person-card{padding:14px;} .gloss-item{padding:12px;} .heb{font-size:1.05rem;}
   .timeline{padding-left:20px;} .t-item::before{left:-26px;}
 }
+/* 상단 바: 알약 버튼은 한 줄로 유지하고, 경로 문구는 좁은 화면에서 숨긴다 */
+.top-bar a{white-space:nowrap;flex-shrink:0;}
+.top-bar>span:last-child{min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+@media(max-width:480px){.top-bar>span:nth-last-child(-n+2){display:none;}}
+/* nav로 이동했을 때 섹션 제목이 고정 nav 밑에 가리지 않게 */
+section[id]{scroll-margin-top:60px;}
 </style>
 </head>
 <body>
 
-<div style="background:#5e2c14;padding:10px 20px;display:flex;align-items:center;gap:10px;">
+<div class="top-bar" style="background:#5e2c14;padding:10px 20px;display:flex;align-items:center;gap:10px;">
   <a href="https://faithreason.kr/Faith_Reason/" style="color:#fff;text-decoration:none;font-size:.83rem;font-weight:600;display:inline-flex;align-items:center;gap:5px;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.2);border-radius:16px;padding:4px 12px;">← 전체 시리즈</a>
   <span style="color:rgba(255,255,255,.35);font-size:.8rem;">|</span>
   <a href="index.html" style="color:#fff;text-decoration:none;font-size:.83rem;font-weight:600;
@@ -234,7 +240,7 @@ footer a{color:rgba(255,255,255,.9);text-decoration:none;font-weight:400;}
 
 <!-- S0 -->
 <section id="s0">
-<div class="section-title">S0 · 도입 — 1872년 12월 3일, 런던</div>
+<h2 class="section-title">S0 · 도입 — 1872년 12월 3일, 런던</h2>
 <p class="section-subtitle">병행 문헌은 적인가, 선물인가</p>
 
 <p>1872년 12월 3일, 런던의 성서고고학회(Society of Biblical Archaeology) 모임에서 대영박물관의 조지 스미스(George Smith, 1840–1876)가 "The Chaldean Account of the Deluge"라는 제목으로 강연했다. 니네베의 아슈르바니팔 도서관에서 출토된 한 점토판 — 오늘날 <em>길가메시 서사시</em> 제11토판으로 불리는 K.3375 — 에서 창세기 6–9장과 놀랍도록 닮은 홍수 기사를 읽어 냈다는 발표였다. 청중석에는 현직 총리 글래드스턴이 있었다. 판화 견습공 출신으로 독학한 서른두 살의 연구자는 하룻밤 사이에 유럽의 화제가 되었다.</p>
@@ -262,7 +268,7 @@ footer a{color:rgba(255,255,255,.9);text-decoration:none;font-weight:400;}
 
 <!-- S1 -->
 <section id="s1">
-<div class="section-title">S1 · 방법론 — 비교의 규칙</div>
+<h2 class="section-title">S1 · 방법론 — 비교의 규칙</h2>
 <p class="section-subtitle">이 시리즈의 척추: 비슷함을 찾는 것이 아니라, 비슷함의 성격을 판정하는 것</p>
 
 <h3>샌드멜의 경고 — "Parallelomania"</h3>
@@ -296,7 +302,7 @@ footer a{color:rgba(255,255,255,.9);text-decoration:none;font-weight:400;}
 
 <!-- S2 -->
 <section id="s2">
-<div class="section-title">S2 · 창조 — 에누마 엘리쉬와 창세기 1장</div>
+<h2 class="section-title">S2 · 창조 — 에누마 엘리쉬와 창세기 1장</h2>
 <p class="section-subtitle">같은 우주론의 언어, 전혀 다른 신학</p>
 
 <h3>『에누마 엘리쉬』 개요</h3>
@@ -342,7 +348,7 @@ footer a{color:rgba(255,255,255,.9);text-decoration:none;font-weight:400;}
 
 <!-- S3 -->
 <section id="s3">
-<div class="section-title">S3 · 홍수 — 아트라하시스·길가메시와 창세기 6–9장</div>
+<h2 class="section-title">S3 · 홍수 — 아트라하시스·길가메시와 창세기 6–9장</h2>
 <p class="section-subtitle">가장 유명한 병행, 가장 조심스러운 판정</p>
 
 <h3>자료 관계 정리</h3>
@@ -389,7 +395,7 @@ footer a{color:rgba(255,255,255,.9);text-decoration:none;font-weight:400;}
 
 <!-- S4 -->
 <section id="s4">
-<div class="section-title">S4 · 법 — 함무라비와 모세</div>
+<h2 class="section-title">S4 · 법 — 함무라비와 모세</h2>
 <p class="section-subtitle">공유된 법 문화, 변혁된 법의 신학</p>
 
 <h3>함무라비 법전 석비</h3>
@@ -420,7 +426,7 @@ footer a{color:rgba(255,255,255,.9);text-decoration:none;font-weight:400;}
 
 <!-- S5 -->
 <section id="s5">
-<div class="section-title">S5 · 언약과 조약 — 히타이트 종주조약과 신명기</div>
+<h2 class="section-title">S5 · 언약과 조약 — 히타이트 종주조약과 신명기</h2>
 <p class="section-subtitle">십계명은 법조문이기 전에 관계 문서다</p>
 
 <p>기원전 14–13세기 아나톨리아의 히타이트 제국은 속국 왕들과 <strong>종주조약</strong>(suzerain-vassal treaty)을 맺었다. 대왕(종주)이 봉신에게 보호와 은혜를 상기시키고 배타적 충성을 요구하는 외교 문서다. 1954년 조지 멘덴홀은 이 조약들의 정형화된 구조가 이스라엘의 언약 본문과 대응한다고 제안했다("Covenant Forms in Israelite Tradition," <em>Biblical Archaeologist</em> 17.3: 50–76).</p>
@@ -457,7 +463,7 @@ footer a{color:rgba(255,255,255,.9);text-decoration:none;font-weight:400;}
 
 <!-- S6 -->
 <section id="s6">
-<div class="section-title">S6 · 지혜문학 — 국경 없는 장르</div>
+<h2 class="section-title">S6 · 지혜문학 — 국경 없는 장르</h2>
 <p class="section-subtitle">문학적 접촉의 가장 강력한 후보, 그리고 그 재맥락화</p>
 
 <h3>아메네모페의 교훈과 잠언 22:17–24:22</h3>
@@ -506,7 +512,7 @@ footer a{color:rgba(255,255,255,.9);text-decoration:none;font-weight:400;}
 
 <!-- S7 -->
 <section id="s7">
-<div class="section-title">S7 · 시편과 우가릿 — 1929년 라스 샴라</div>
+<h2 class="section-title">S7 · 시편과 우가릿 — 1929년 라스 샴라</h2>
 <p class="section-subtitle">히브리 시의 이웃 언어, 그리고 신화의 해체</p>
 
 <h3>발견과 해독</h3>
@@ -560,7 +566,7 @@ footer a{color:rgba(255,255,255,.9);text-decoration:none;font-weight:400;}
 
 <!-- S8 -->
 <section id="s8">
-<div class="section-title">S8 · 역사 비문 — 상대편의 기록</div>
+<h2 class="section-title">S8 · 역사 비문 — 상대편의 기록</h2>
 <p class="section-subtitle">왕실 비문의 선전성은 양쪽 모두에 있다</p>
 
 <div class="acc-item">
@@ -602,7 +608,7 @@ footer a{color:rgba(255,255,255,.9);text-decoration:none;font-weight:400;}
 
 <!-- S9 -->
 <section id="s9">
-<div class="section-title">S9 · 형상과 성전 — 흩어진 논의의 허브</div>
+<h2 class="section-title">S9 · 형상과 성전 — 흩어진 논의의 허브</h2>
 <p class="section-subtitle">여러 시리즈에 흩어져 있던 고대근동 논의를 한곳에 회수한다</p>
 
 <h3>첼렘 — 왕의 칭호에서 모든 사람의 존엄으로</h3>
@@ -628,7 +634,7 @@ footer a{color:rgba(255,255,255,.9);text-decoration:none;font-weight:400;}
 
 <!-- S10 -->
 <section id="s10">
-<div class="section-title">S10 · 종합 — 성경의 독특성은 어디에 있는가</div>
+<h2 class="section-title">S10 · 종합 — 성경의 독특성은 어디에 있는가</h2>
 <p class="section-subtitle">문화적 진공이 아니라 신학적 변혁</p>
 
 <p>일곱 장르를 지나며 얻은 판정을 모아 보자.</p>
@@ -660,7 +666,7 @@ footer a{color:rgba(255,255,255,.9);text-decoration:none;font-weight:400;}
 
 <!-- S11 -->
 <section id="s11">
-<div class="section-title">S11 · 유물 갤러리 — 토판과 비문 10선</div>
+<h2 class="section-title">S11 · 유물 갤러리 — 토판과 비문 10선</h2>
 <p class="section-subtitle">소장처와 온라인 열람 링크 (2026년 9월 확인)</p>
 
 <div class="artifact-grid">
@@ -680,7 +686,7 @@ footer a{color:rgba(255,255,255,.9);text-decoration:none;font-weight:400;}
 
 <!-- S12 -->
 <section id="s12">
-<div class="section-title">S12 · 학자 카드 9인</div>
+<h2 class="section-title">S12 · 학자 카드 9인</h2>
 <p class="section-subtitle">발견하고, 경고하고, 비교하고, 논쟁한 사람들</p>
 <div class="person-grid">
 <div class="person-card"><div class="person-name">조지 스미스</div><div class="person-role">대영박물관 아시리아학자 (1840–1876)</div><div class="person-contrib">독학으로 쐐기문자를 익혀 1872년 길가메시 홍수 토판을 해독·발표. 『The Chaldean Account of Genesis』(1876), 『Assyrian Discoveries』(1875).</div></div>
@@ -697,7 +703,7 @@ footer a{color:rgba(255,255,255,.9);text-decoration:none;font-weight:400;}
 
 <!-- S13 -->
 <section id="s13">
-<div class="section-title">S13 · 용어 사전</div>
+<h2 class="section-title">S13 · 용어 사전</h2>
 <div class="gloss-grid">
 <div class="gloss-item"><div class="gloss-term">고대근동 (ANE)</div><div class="gloss-def">Ancient Near East. 메소포타미아, 이집트, 아나톨리아, 레반트(가나안·시리아) 등 구약의 역사적 무대 전체를 가리키는 학술 용어.</div></div>
 <div class="gloss-item"><div class="gloss-term">에누마 엘리쉬 (<span class="akk">Enūma eliš</span>)</div><div class="gloss-def">마르둑의 티아맛 정복과 세계 창조, 바빌론 건설을 노래한 바빌론 창조 서사시. 일곱 토판.</div></div>
@@ -720,7 +726,7 @@ footer a{color:rgba(255,255,255,.9);text-decoration:none;font-weight:400;}
 
 <!-- S14 -->
 <section id="s14">
-<div class="section-title">S14 · 토론 논제</div>
+<h2 class="section-title">S14 · 토론 논제</h2>
 <div class="discuss-card"><div class="discuss-num">논제 1</div><div class="discuss-q">창세기 1장이 에누마 엘리쉬를 '알고' 썼다면, 그것은 영감론에 문제가 되는가 — 논쟁적 전복 모델과 성육신 유비로 답하라.</div><div class="discuss-hint">S2의 판정이 창세기의 저작 연대와 무관하게 성립한다는 점, 그리고 '알고 썼다'가 '베꼈다'와 같은 뜻인지를 먼저 구별해 보라.</div></div>
 <div class="discuss-card"><div class="discuss-num">논제 2</div><div class="discuss-q">잠언의 아메네모페 수용은 '이방 지혜'와 계시의 관계에 무엇을 시사하는가 — 일반 은총 교리로 평가하라.</div><div class="discuss-hint">잠 22:19의 재맥락화와 23:11의 '구속자'가 수용 과정에서 어떤 역할을 하는지 살펴보라. 수용의 기준은 무엇이었을까?</div></div>
 <div class="discuss-card"><div class="discuss-num">논제 3</div><div class="discuss-q">샌드멜의 parallelomania 경고와 병행 회피(경건주의) 사이에서, 건전한 비교의 기준선을 어디에 그어야 하는가 — 테홈/티아맛 사례로 시험하라.</div><div class="discuss-hint">S1의 네 가지 질문 중 어느 것이 테홈 사례에서 결정적이었는지, 그리고 '어원 차용 배제'가 '주제적 대화'까지 배제하는지 논하라.</div></div>
@@ -731,7 +737,7 @@ footer a{color:rgba(255,255,255,.9);text-decoration:none;font-weight:400;}
 
 <!-- S_REF -->
 <section id="s_ref">
-<div class="section-title">📎 학술 레퍼런스</div>
+<h2 class="section-title">📎 학술 레퍼런스</h2>
 <div class="section-subtitle">이 자료에서 참고한 주요 문헌</div>
 
 <div class="ref-group">
@@ -792,7 +798,7 @@ footer a{color:rgba(255,255,255,.9);text-decoration:none;font-weight:400;}
 
 <!-- QUIZ -->
 <section id="s_quiz">
-<div class="section-title">❓ 심화 퀴즈</div>
+<h2 class="section-title">❓ 심화 퀴즈</h2>
 <div class="section-subtitle">12문제로 이해도를 점검합니다.</div>
 
 <div id="quiz-section">
@@ -1002,12 +1008,21 @@ const feedbacks = {
     const h = a.getAttribute('href');
     if (h && h.charAt(0) === '#') map[h.slice(1)] = a;
   });
+  // 현재 섹션의 링크가 nav 화면 밖에 있으면 nav만 가로로 움직여 보이게 한다(페이지 세로 스크롤은 건드리지 않음)
+  function showInNav(a) {
+    let box = a.parentElement;
+    while (box && box !== document.body && !(/(auto|scroll)/.test(getComputedStyle(box).overflowX) && box.scrollWidth > box.clientWidth + 1)) box = box.parentElement;
+    if (!box || box === document.body) return;
+    const r = a.getBoundingClientRect(), b = box.getBoundingClientRect();
+    if (r.left < b.left + 8 || r.right > b.right - 8) box.scrollLeft += (r.left - b.left) - (b.width - r.width) / 2;
+  }
   if (!('IntersectionObserver' in window)) return;
   const obs = new IntersectionObserver(function (entries) {
     entries.forEach(function (e) {
       if (e.isIntersecting && map[e.target.id]) {
         navLinks.forEach(function (a) { a.classList.remove('active'); });
         map[e.target.id].classList.add('active');
+        showInNav(map[e.target.id]);
       }
     });
   }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });

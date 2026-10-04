@@ -38,7 +38,7 @@
     --bg: #f9fafb;
     --card: #ffffff;
     --text: #1a1a2e;
-    --muted: #6c757d;
+    --muted: #5c636a;
     --border: #dee2e6;
     --radius: 12px;
     --shadow: 0 2px 12px rgba(0,0,0,0.08);
@@ -212,11 +212,17 @@
     .match-row { grid-template-columns: 1fr; }
     .timeline { padding-left: 20px; } .t-item::before { left: -26px; }
   }
+  /* 상단 바: 알약 버튼은 한 줄로 유지하고, 경로 문구는 좁은 화면에서 숨긴다 */
+  .top-bar a { white-space: nowrap; flex-shrink: 0; }
+  .top-bar > span:last-child { min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  @media (max-width: 480px) { .top-bar > span:nth-last-child(-n+2) { display: none; } }
+  /* nav로 이동했을 때 섹션 제목이 고정 nav 밑에 가리지 않게 */
+  section[id] { scroll-margin-top: 60px; }
 </style>
 </head>
 <body>
 
-<div style="background:#5e2c14;padding:10px 20px;display:flex;align-items:center;gap:10px;">
+<div class="top-bar" style="background:#5e2c14;padding:10px 20px;display:flex;align-items:center;gap:10px;">
   <a href="https://faithreason.kr/Faith_Reason/" style="color:#fff;text-decoration:none;font-size:.83rem;font-weight:600;display:inline-flex;align-items:center;gap:5px;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.2);border-radius:16px;padding:4px 12px;">← 전체 시리즈</a>
   <span style="color:rgba(255,255,255,.35);font-size:.8rem;">|</span>
   <a href="index.html" style="color:#fff;text-decoration:none;font-size:.83rem;font-weight:600;
@@ -249,7 +255,7 @@
 
 <!-- S0 -->
 <section id="s0" class="section">
-<div class="section-title">🏛️ 박물관에서 성경 읽기</div>
+<h2 class="section-title">🏛️ 박물관에서 성경 읽기</h2>
 <p class="section-sub">1872년 런던, 대영박물관의 한 작업실에서 이야기가 시작돼요.</p>
 
 <div class="card">
@@ -281,7 +287,7 @@
 
 <!-- S1 -->
 <section id="s1" class="section">
-<div class="section-title">🐉 바빌론의 창조 이야기</div>
+<h2 class="section-title">🐉 바빌론의 창조 이야기</h2>
 <p class="section-sub">바빌론 사람들도 "세상은 어떻게 시작됐을까?"를 이야기했어요. 두 이야기를 나란히 읽어 보세요.</p>
 
 <div class="tab-bar">
@@ -366,7 +372,7 @@
 
 <!-- S2 -->
 <section id="s2" class="section">
-<div class="section-title">🌊 홍수 이야기가 여러 개?</div>
+<h2 class="section-title">🌊 홍수 이야기가 여러 개?</h2>
 <p class="section-sub">조지 스미스를 흥분시킨 그 점토판, 길가메시 서사시의 홍수 이야기를 들여다봐요.</p>
 
 <div class="card">
@@ -440,7 +446,7 @@
 
 <!-- S3 -->
 <section id="s3" class="section">
-<div class="section-title">⚖️ 왕의 법과 하나님의 법</div>
+<h2 class="section-title">⚖️ 왕의 법과 하나님의 법</h2>
 <p class="section-sub">파리 루브르 박물관에는 사람 키보다 큰 검은 돌기둥이 서 있어요.</p>
 
 <div class="card">
@@ -488,7 +494,7 @@
 
 <!-- S4 -->
 <section id="s4" class="section">
-<div class="section-title">📜 계약서로 읽는 십계명</div>
+<h2 class="section-title">📜 계약서로 읽는 십계명</h2>
 <p class="section-sub">십계명은 '규칙 목록'일까요? 고대 왕들의 계약서와 비교하면 새로운 모습이 보여요.</p>
 
 <div class="card">
@@ -529,7 +535,7 @@
 
 <!-- S5 -->
 <section id="s5" class="section">
-<div class="section-title">⛈️ 폭풍의 신? 우리 하나님!</div>
+<h2 class="section-title">⛈️ 폭풍의 신? 우리 하나님!</h2>
 <p class="section-sub">시리아 해안의 한 밭에서, 성경의 시를 새롭게 읽게 해 준 발견이 나왔어요.</p>
 
 <div class="timeline">
@@ -570,7 +576,7 @@
 
 <!-- S6 -->
 <section id="s6" class="section">
-<div class="section-title">🗿 돌에 새겨진 성경 인물들</div>
+<h2 class="section-title">🗿 돌에 새겨진 성경 인물들</h2>
 <p class="section-sub">성경에 나오는 사건을 '상대편'도 기록해 두었다면? 짜릿한 전시실이에요.</p>
 
 <div class="artifact-grid">
@@ -613,7 +619,7 @@
 
 <!-- S7 -->
 <section id="s7" class="section">
-<div class="section-title">💡 그래서 성경은 특별할까?</div>
+<h2 class="section-title">💡 그래서 성경은 특별할까?</h2>
 <p class="section-sub">여섯 전시실을 다 돌았어요. 이제 한 번에 정리해 볼게요.</p>
 
 <div class="tbl-wrap">
@@ -647,7 +653,7 @@
 
 <!-- S8 -->
 <section id="s8" class="section">
-<div class="section-title">🌟 박물관의 안내자들</div>
+<h2 class="section-title">🌟 박물관의 안내자들</h2>
 <p class="section-sub">점토판을 읽고, 성경과 나란히 놓고 연구한 네 사람이에요.</p>
 
 <div class="person-grid">
@@ -684,7 +690,7 @@
 
 <!-- QUIZ -->
 <section id="squiz" class="section">
-<div class="section-title">❓ 얼마나 이해했나요?</div>
+<h2 class="section-title">❓ 얼마나 이해했나요?</h2>
 <p class="section-sub">10문제로 확인해봐요.</p>
 
 <div id="quiz-section">
@@ -901,12 +907,21 @@ const feedbacks = {
     const h = a.getAttribute('href');
     if (h && h.charAt(0) === '#') map[h.slice(1)] = a;
   });
+  // 현재 섹션의 링크가 nav 화면 밖에 있으면 nav만 가로로 움직여 보이게 한다(페이지 세로 스크롤은 건드리지 않음)
+  function showInNav(a) {
+    let box = a.parentElement;
+    while (box && box !== document.body && !(/(auto|scroll)/.test(getComputedStyle(box).overflowX) && box.scrollWidth > box.clientWidth + 1)) box = box.parentElement;
+    if (!box || box === document.body) return;
+    const r = a.getBoundingClientRect(), b = box.getBoundingClientRect();
+    if (r.left < b.left + 8 || r.right > b.right - 8) box.scrollLeft += (r.left - b.left) - (b.width - r.width) / 2;
+  }
   if (!('IntersectionObserver' in window)) return;
   const obs = new IntersectionObserver(function (entries) {
     entries.forEach(function (e) {
       if (e.isIntersecting && map[e.target.id]) {
         navLinks.forEach(function (a) { a.classList.remove('active'); });
         map[e.target.id].classList.add('active');
+        showInNav(map[e.target.id]);
       }
     });
   }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
